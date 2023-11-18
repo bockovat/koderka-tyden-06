@@ -7,4 +7,109 @@ body {
 	font: 16px/1.5 sans-serif ;
 }
 
+form {
+	width: 100%;
+	max-width: 300px;
+}
+
+.button {
+	padding: 10px 10px;
+	background-color: dodgerblue;
+	border: 1px solid dodgerblue;
+	border-radius: 4px;;
+}
+
+/* pod sebou */
+
+.form-field, .form-checkbox {
+	margin-bottom: 10px;
+}
+
+.form-field > label {
+	display:block;
+	font-size: 14px;
+	color: grey;
+}
+
+.form-field input[type="text"], .form-field input[type="number"], 
+textarea, .form-field input[type="email"], .form-field select {
+	width: 100%;
+	border: 1px solid dodgerblue;
+	border-radius: 4px;
+	font-size: 16px;
+	color: darkgray;
+	background-color: azure;
+	padding: 5px 10px;
+}
+
+.required {
+	color: red;
+}
+
+/* vedle sebe */
+
+.form-horizontal {
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.form-horizontal label {
+	/* display: inline-block;
+	width: 100px; */
+	flex: 0 0 100px;
+	font-size: 14px;
+	color: grey;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.form-horizontal input {
+	/* width: 200px; */
+	flex: 1 1 100%;
+}
+
+/* checkbox */
+
+.form-checkbox input {
+	width: 30px;
+	height: 30px;
+}
+
+/* radiobuttons */
+
+.form-radio {
+	display: block;
+}
+
+/* select */
+
+
+.form-field option {
+	color: red;
+	font-size: 30px;
+}
+
+/* nadstavba */
+.form-field input[type="text"]:focus, .form-field input[type="number"]:focus, 
+textarea:focus, .form-field input[type="email"]:focus, .form-field select:focus {
+	outline: 0;
+	/* outline: 2px solid red; */
+	border: 2px solid red;
+	background-color: lightyellow;
+ }
+
+ .form-field input[type="text"]:not(:placeholder-shown):valid {
+	background-color: lightgreen;
+	border-color: green;
+ }
+
+ .form-field input[type="text"]:not(:placeholder-shown):invalid {
+	background-color: pink;
+	border-color: red  ;
+ }
+
+ .form-field input[type="text"]:placeholder-shown {
+	border: 2px solid orange;
+ }
+
 /* ------------------------- */

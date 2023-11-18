@@ -10,14 +10,38 @@
 
 	<h1>Stylování formulářů</h1>
 
+	<form action="http://formular.itgirls.cz" method="post">
+
 
 	<!-- Label a pole pod sebou -->
 
+	<div class="form-field">
+		<label class="label" for="name">Name</label>
+		<input type="text" name="name" id="name" placeholder="Krestni jmeno">
+	</div>
 
+	<div class="form-field">
+		<label for="surname">Surname<span class="required">*</span></label>
+		<input type="text" name="surname" id="surname" required placeholder=" ">
+	</div>
 
+	<div class="form-field">
+		<label for="adress">Adress</label>
+		<textarea type="text" name="adress" id="adress" rows="5"></textarea>
+	</div>
+
+ 
 	<!-- Label a pole vedle sebe -->
 
+	<div class="form-horizontal">
+		<label for="nickname">Nickname</label>
+		<input type="text" name="nickname" id="Nickname">
+	</div>
 
+	<div class="form-horizontal">
+		<label for="age">Age</label>
+		<input type="number" name="age" id="age">
+	</div>
 
 
 	<!--
@@ -34,6 +58,28 @@
 		- v podstatě nemožné stylovat
 		- lze vyrobit "falešný" checkbox/radio pomocí speciálních CSS triků - ukážeme si později
 	-->
+<div class="form-checkbox">
+	<input type="checkbox" name="agreement" id="agreement">
+	<label for="agreement">Agree with conditions</label>
+</div>
+
+<div class="form-field">
+	<label>Oblibene ovoce</label>
+	<div class="form-radio">
+		<input type="radio" name="ovoce" id="ovoce1" value="jablko" checked>
+		<label for="ovoce1">Jablko</label>
+	</div>
+
+	<div class="form-radio">
+		<input type="radio" name="ovoce" id="ovoce2" value="hruska">
+		<label for="ovoce2">Hruska</label>
+	</div>
+		
+	<div class="form-radio">
+		<input type="radio" name="ovoce" id="ovoce3" value="tresen">
+		<label for="ovoce3">Tresen</label>
+	</div>
+</div>
 
 
 	<!--
@@ -42,6 +88,15 @@
 		- na <option> uvnitř selectu lze nastavit jen velmi omezenou sadu vlastností
 	-->
 
+	<div class="form-field">
+		<label for="city">City</label>
+		<select name="city" id="city">
+			<option value="Praha">Praha, the capital city</option>
+			<option value="Brno">Brno</option>
+			<option value="Praha">Ostrava</option>
+		</select>
+	</div>
+
 
 
 
@@ -49,7 +104,8 @@
 		Stylování stavů formulářového pole
 		- :focus, :valid, :invalid, :placeholder-shown
 	-->
+	<button type="submit" class="button">OK</button>
 
-
+	</form>
 </body>
 </html>

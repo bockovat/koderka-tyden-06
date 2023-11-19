@@ -6,4 +6,50 @@ body {
 	padding: 2em;
 }
 
+
+
 /* ---------------------------- */
+.pes {
+	/* color: pink; */
+	color: grey;
+	width: 60px;
+	stroke: black;
+	stroke-width: 10px;
+	/* obrys */
+}
+
+.pes:hover {
+	color: red;
+}
+
+button {
+	color: blue;
+}
+
+button:hover {
+	color: hotpink;
+}
+
+button:active {
+	color: green;
+}
+
+.button-primary {
+	background-color: red;
+	color: white;
+}
+
+.button-primary span {
+	background-color: currentColor;
+}
+
+.listecek:hover .list {
+	fill: green;
+	opacity: 1;
+}
+
+.listecek:hover .stonek {
+	/* potrebuji oznacit cely listecek, aby se mi po najeti mysi nezobrazoval zvlast stonek a zvlast list */
+	fill: burlywood;
+	opacity: 1;
+}

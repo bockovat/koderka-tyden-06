@@ -8,4 +8,30 @@ body {
 
 /* ---------------------------- */
 
+@keyframes hop {
+	0% {transform: translateY(0)}
+	50% {transform: translateY(-25px)}
+	100% {transform: translateY(0)}
+}
 
+#kure {
+	animation: hop 1s infinite both ease;
+}
+
+@keyframes mrk {
+	0% {transform: scaleY(1) }
+	/* znamena v 0% casu */
+	5% {transform: scaleY(0.1) }
+	/* znamena v 5 % casu */
+	12% {transform: scaleY(1) }
+	/* znamena v 12 % casu */
+	/* ostatnich 88% se nebude nic dit nez uplynou nastavene 3s, pak se bude animace opakovat */
+}
+
+#oci {
+	animation: mrk 3s infinite both ease;
+	/* 1s - trvani animaceinfinite - donekonecna, both: zacne na 0%, konci na 100%; ease - pomale rozjizdeni a pomale brzdeni  */
+
+	transform-origin: 0 258px;
+	/* zmena vychozich souradnic oci, jsou puvodne nastavene na horni hranu */
+}
